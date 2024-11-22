@@ -1,13 +1,30 @@
 package com.distribuida.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cliente")
 public class Cliente {
 
 	//Atributos
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name= "id_cliente")
 	private int idCliente;
+	@Column(name= "id_cedula")
 	private String cedula;
+	@Column(name= "id_nombre")
 	private String nombre;
+	@Column(name= "id_apellido")
 	private String apellido;
+	@Column(name= "id_direccion")
 	private String direccion;
+	@Column(name= "id_correo")
 	private String correo;
 	
 	//constructores
